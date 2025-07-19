@@ -11,14 +11,14 @@ nav:
   - Home: index.md
   - Macroproceso:
       - 01 Visión Estratégica: 'macroprocess/01_Vision_Estrategica.md'
-      - 02 Discovery: 'macroprocess/02_Product_Discovery.md'
-      
+      - 02 Product Discovery:    'macroprocess/02_Product_Discovery.md'
+      # …
   - Juntas Gerenciales:
-      - Stand-up Diario: 'meetings/daily_standup.md'
-      
+      - Stand-up Diario:          'meetings/daily_standup.md'
+      # …
   - Bitácora:
-      - 2025-07-18: 'bitacora/2025-07-18.md'
+      - '2025-07-18':            'bitacora/2025-07-18.md'
   - Áreas:
-      - Marketing: 'area-marketing.md'
-      - Ops: 'area-ops.md'
-      - Producto: 'area-producto.md'
+      - Marketing:               'area-marketing.md'
+      - Operaciones:             'area-ops.md'
+      - Producto:                'area-producto.md'
