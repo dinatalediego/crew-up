@@ -1,6 +1,6 @@
 site_name: Crew-Up Macroproceso
-site_url: https://<dinatalediego>.github.io/crew-up
-site_dir: docs                # MkDocs generará aquí el HTML
+site_url: https://dinatalediego.github.io/crew-up
+
 theme:
   name: material
   palette:
@@ -9,9 +9,10 @@ theme:
 
 nav:
   - Macroproceso:
-      - 01 Visión: 'macroprocess/01_Vision_Estrategica.md'
-      - 02 Discovery: 'macroprocess/02_Product_Discovery.md'
-      # …
-  - Juntas:
+      - 01 Visión Estratégica: 'macroprocess/01_Vision_Estrategica.md'
+      - 02 Product Discovery: 'macroprocess/02_Product_Discovery.md'
+      # …otros pasos…
+  - Juntas Gerenciales:
       - Stand-up Diario: 'meetings/daily_standup.md'
-      # …
+      - Reunión Ejecutiva Semanal: 'meetings/weekly_exec_sync.md'
+      # …otras plantillas…
