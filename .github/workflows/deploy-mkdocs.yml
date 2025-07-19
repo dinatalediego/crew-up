@@ -1,7 +1,8 @@
 name: 🚀 Deploy MkDocs to Pages
-#  ─────── aquí le damos permiso de escritura de código ─────────
+
 permissions:
   contents: write
+
 on:
   push:
     branches: [ main ]
@@ -13,9 +14,9 @@ jobs:
       - name: 🛎 Checkout repo
         uses: actions/checkout@v3
         with:
-          # mantenemos las credenciales del GITHUB_TOKEN
           persist-credentials: true
           fetch-depth: 0
+
       - name: 🐍 Setup Python
         uses: actions/setup-python@v4
         with:
@@ -25,10 +26,14 @@ jobs:
         run: pip install mkdocs-material
 
       - name: 📚 Build site
-        run: mkdocs build
+        run: mkdocs build --site-dir site
+
+      - name: Disable Jekyll
+        run: touch site/.nojekyll
 
       - name: 🚀 Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: site
+
