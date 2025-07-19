@@ -1,0 +1,14 @@
+site_name: Crew-Up Macroproceso
+theme:
+  name: material
+  palette:
+    primary: 'indigo'
+    accent: 'blue'
+nav:
+  - Macroproceso: 
+      - 01 Vision: 'macroprocess/01_Vision_Estrategica.md'
+      - 02 Discovery: 'macroprocess/02_Product_Discovery.md'
+      # …etc.
+  - Juntas:
+      - Daily Standup: 'meetings/daily_standup.md'
+      # …
