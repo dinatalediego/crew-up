@@ -1,26 +1,17 @@
-# .github/workflows/deploy-mkdocs.yml
-name: 🚀 Deploy MkDocs to Pages
+site_name: Crew-Up Macroproceso
+site_url: https://<TU_USUARIO>.github.io/crew-up
+site_dir: docs                # MkDocs generará aquí el HTML
+theme:
+  name: material
+  palette:
+    primary: 'indigo'
+    accent: 'blue'
 
-on:
-  push:
-    branches: [ main ]
-
-jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-
-      - uses: actions/setup-python@v4
-        with: python-version: '3.x'
-
-      - run: pip install mkdocs-material
-
-      - name: 📚 Build site
-        run: mkdocs build      # → genera la web en 'site/'
-
-      - name: 🚀 Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: site    # ← ahora publica 'site'
+nav:
+  - Macroproceso:
+      - 01 Visión: 'macroprocess/01_Vision_Estrategica.md'
+      - 02 Discovery: 'macroprocess/02_Product_Discovery.md'
+      # …
+  - Juntas:
+      - Stand-up Diario: 'meetings/daily_standup.md'
+      # …
