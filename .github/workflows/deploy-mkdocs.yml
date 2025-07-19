@@ -1,5 +1,7 @@
 name: 🚀 Deploy MkDocs to Pages
-
+#  ─────── aquí le damos permiso de escritura de código ─────────
+permissions:
+  contents: write
 on:
   push:
     branches: [ main ]
@@ -10,7 +12,10 @@ jobs:
     steps:
       - name: 🛎 Checkout repo
         uses: actions/checkout@v3
-
+        with:
+          # mantenemos las credenciales del GITHUB_TOKEN
+          persist-credentials: true
+          fetch-depth: 0
       - name: 🐍 Setup Python
         uses: actions/setup-python@v4
         with:
